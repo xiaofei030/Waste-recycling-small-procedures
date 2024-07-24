@@ -1,0 +1,24 @@
+<view class="form-item">
+  <text class="head">物品： {{object}}</text>
+</view>
+<view class="form-item">
+  <text class="head">单价： {{price}}</text>
+</view>
+<view class="form-item">
+  <text class="head">数（重）量： {{quantity}}</text>
+</view>
+<view class="form-item">
+  <text class="head">取货方式：{{chooseWay}}</text>
+</view>
+<view class="form-item">
+  <text class="head">联系人：{{name}}</text>
+</view>
+<view class="form-item">
+  <text class="head">手机号： {{mobile}}</text>
+</view>
+<view class="form-item">
+  <text class="head">地址： {{address}}</text>
+</view>
+<view class="form-item">
+  <text class="head">估价： {{guessPrice}}</text>
+</view>

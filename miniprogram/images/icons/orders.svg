@@ -1,0 +1,8 @@
+<svg width='140' heiight='170' xmlns='http://wwww.w3.org/2000/svg'>
+  <title>Cat</title>
+  <desc>Stick Figure of Cat</desc>
+  <!-- 在这里绘制图像 -->
+  <circle cx='70' cy='95' r='50' style='stroke:black; fill:none'></circle>
+  <circle cx='55' cy='80' r='5' stroke='black' fill='#3339933'></circle>
+  <circle cx='85' cy='80' r='5' stroke='black' fill='#3339933'></circle>
+</svg>

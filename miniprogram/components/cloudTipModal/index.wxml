@@ -1,0 +1,14 @@
+<!--miniprogram/components/cloudTipModal/index.wxml-->
+<view class="install_tip" wx:if="{{showUploadTip}}">
+  <view class="install_tip_back"></view>
+  <view class="install_tip_detail" bindmyevent="myevent">
+    <button class="avatar-wrapper " open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+      <image class="avatar" src="{{avatar}}"></image>
+    </button>
+    <input type="nickname" class="weui-input" placeholder="点击获取昵称" bindblur="bindblur" value="{{nickname}}" />
+    <view class="choose">
+      <button class="no" bind:tap="no">取消</button>
+      <button class="yes" bind:tap="yes">确定</button>
+    </view>
+  </view>
+</view>

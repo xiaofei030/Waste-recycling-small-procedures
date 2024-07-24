@@ -1,0 +1,22 @@
+
+
+ .weui-cells:before {
+  top: 0;
+  border-top: 1rpx solid white;
+  margin-left: 5px;
+}
+
+.weui-cell {
+  width: 95%;
+  float: right;
+  line-height: 3.5rem;
+}
+
+.weui-cells:after {
+  bottom: 0;
+  border-bottom: 1rpx solid white
+}
+
+.weui-btn {
+  width: 80%;
+}

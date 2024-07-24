@@ -1,0 +1,17 @@
+<view class="main">
+  <scroll-view scroll-y="true" scroll-with-animation="true" bindscroll="rightScrollFn" class="left">
+    <view wx:for="{{daan0}}" data-myid="{{item[0].listId}}" wx:key="index" class="scroll-view-item left-tab {{leftActiveNum==item[0].listId ? 'active' : ''}}" bindtap="leftClickFn">{{item[0].title}}
+    </view>
+  </scroll-view>
+  <scroll-view scroll-y="true" scroll-with-animation="true" bindscroll="rightScrollFn" class="right" scroll-into-view="top{{Tab}}">
+    <block wx:for="{{daan0[leftActiveNum]}}" wx:key="index">
+      <view class="caipin_item" data-name="{{item.name}}" data-price="{{item.price}}" bindtap="evaluate" data-rule="{{item.rule}}">
+        <image class="cai_img" src="{{item.imgUrl}}" />
+        <view class="cai_root2">
+          <!-- {{item.name+(item.nameNum !== undefined ? item.nameNum : '')}} -->
+          <view class="cai_title">{{item.name+" "+(item.price !== undefined ? item.price : '待定')+(item.unit !== undefined ? item.unit : '')}}</view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>

@@ -1,0 +1,49 @@
+<view>
+  <view class="banner">
+    <swiper indicator-dots="true" indicator-color="rgba(255,255,255,0.5)" indicator-active-color="#fff" circular autoplay='true' current="{{imageIndex}}" interval="4000">
+      <swiper-item wx:for="{{list}}" wx:key="index">
+        <image src="{{item.image}}"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <view class="recycle">
+    <view class="r_top">
+      <view class="rt-left">比价回收区</view>
+      <view class="rt-right" bindtap="navigateTo">全部 ></view>
+    </view>
+    <view class="r-img">
+      <view class="category-view">
+        <block wx:for="{{categoryContents}}" wx:key="index">
+          <view class="category-box" bindtap="navigateTo">
+            <view class="circle-beg" style="">
+              <image src="{{item.imgsrc}}"></image>
+              <view>{{item.text}}</view>
+            </view>
+            <text>{{item.name}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+  <button class="btn" bindtap="onDefaultButtonClick" type="primary">一键回收</button>
+  <view class="recycle">
+    <view class="r_top">
+      <view class="rt-left">回收流程指南</view>
+      <view class="g-right" bind:tap="clickShow">回收指南说明 ></view>
+    </view>
+    <view class="r-img">
+      <block wx:for="{{guide}}" wx:key="index">
+          <view class="guide-box">
+            <view class="circle-beg" style="">
+              <image src="{{item.imgsrc}}"></image>
+              <text></text>
+              <view>{{item.text}}</view>
+            </view>
+            <text>{{item.name}}</text>
+          </view>
+        
+        </block>
+    </view>
+  </view>
+</view>

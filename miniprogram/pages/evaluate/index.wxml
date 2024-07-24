@@ -1,0 +1,42 @@
+<view class="box">
+  <form bindsubmit="formSubmit">
+    <view class="form-item">
+      <text class="head">物品：</text>
+      <input style="margin-top: 15px;font-size: 13px;" type='text' name='object' value="{{name}}" placeholder="请输入名字" bind:tap="chooseGoods"></input>
+    </view>
+    <view class="form-item">
+      <text class="head">单价：</text>
+      <input style="margin-top: 15px;font-size: 13px;" type='text' value="{{price}} "name='price' placeholder="请输入单价 "/>
+    </view>
+    <view class="form-item">
+      <text class="head">数（重）量：</text>
+      <input style="margin-top: 15px;font-size: 13px;" type='text' name='quantity' placeholder="请输入台数或公斤数"/>
+    </view>
+    <view class="form-item">
+      <text class="head">取货方式：</text>
+      <picker mode="selector" bindchange="bindPickerChange" name="chooseWay" range-key="name" value="{{index}}" range="{{chooseWay}}">
+        <view class="head pic">
+          {{chooseWay[index].name}}
+        </view>
+      </picker>
+    </view>
+    <view class="form-item">
+      <text class="head">联系人：</text>
+      <input style="margin-top: 15px;font-size: 13px;" type='text' name='name' value="{{address.consignee}}" placeholder="请输入联系人姓名"/>
+    </view>
+    <view class="form-item">
+      <text class="head">手机号：</text>
+      <input style="margin-top: 15px;font-size: 13px;" type='text' name='mobile' value="{{address.mobile}}" placeholder="请输入手机号"/>
+    </view>
+    <view class="form-item">
+      <text class="head">地址：</text>
+      <input style="margin-top: 15px;font-size: 13px;width:100%;" type='text' name='address'value="{{address.myregion+address.detailAddress}}" placeholder="请输入地址"/>
+    </view>
+    <button form-type="submit" type="primary">提交</button>
+  </form>
+  <movable-area class="movable-area">
+    <movable-view class="movable-view" direction="all" bind:tap="clickRule">
+     <text>估价规则</text>
+    </movable-view>
+  </movable-area>
+</view>

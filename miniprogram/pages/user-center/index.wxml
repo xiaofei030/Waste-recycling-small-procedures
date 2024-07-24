@@ -1,0 +1,42 @@
+<!-- pages/me/index.wxml -->
+<view class="page_container">
+  <view class="top_bg" />
+  <view class="main_content">
+    <view class="userinfo_container">
+      <image wx:if="{{!avatar}}" style="width: 40px;height: 40px;overflow: hidden;" src="cloud://cloud1-8gyjnoot0293e18d.636c-cloud1-8gyjnoot0293e18d-1327821582/icon/avatar.png" mode="widthFix" />
+      <image wx:if="{{avatar}}" class="avatar" style="width: 40px;height: 40px;overflow: hidden;" src="{{avatar}}" mode="widthFix" />
+      <view wx:if="{{ !avatar }}" class="username" bind:tap="toSetting">点击授权登录</view>
+      <view wx:else class="username">{{nickname }}</view>
+    </view>
+    <view class="settings_container">
+      <view class="setting_item" bind:tap="toWallet">
+        <view class="left">
+          <image class="setting_icon" src="cloud://cloud1-8gyjnoot0293e18d.636c-cloud1-8gyjnoot0293e18d-1327821582/icon/customer-service.svg" />
+          <button class="contact-button">
+            我的钱包
+          </button>
+        </view>
+        <image class="arrow_icon" src="cloud://cloud1-8gyjnoot0293e18d.636c-cloud1-8gyjnoot0293e18d-1327821582/icon/arrow.svg" />
+      </view>
+      <view class="setting_item" bind:tap="toLocation">
+        <view class="left">
+          <image class="setting_icon" src="cloud://cloud1-8gyjnoot0293e18d.636c-cloud1-8gyjnoot0293e18d-1327821582/icon/customer-service.svg" />
+          <button class="contact-button">
+            我的地址
+          </button>
+        </view>
+        <image class="arrow_icon" src="cloud://cloud1-8gyjnoot0293e18d.636c-cloud1-8gyjnoot0293e18d-1327821582/icon/arrow.svg" />
+      </view>
+      <view class="setting_item">
+        <view class="left">
+          <image class="setting_icon" src="cloud://cloud1-8gyjnoot0293e18d.636c-cloud1-8gyjnoot0293e18d-1327821582/icon/customer-service.svg" />
+          <button open-type="contact" class="contact-button">
+            我的客服
+          </button>
+        </view>
+        <image class="arrow_icon" src="cloud://cloud1-8gyjnoot0293e18d.636c-cloud1-8gyjnoot0293e18d-1327821582/icon/arrow.svg" />
+      </view>
+    </view>
+  </view>
+  <cloud-tip-modal bindmyevent="myevent" showUploadTipProps="{{showUploadTip}}" />
+</view>
